@@ -92,7 +92,7 @@ project_name = "books-three-tier"
 frontend_launch_template_id = module.frontend_and_backend_lt.frontend_launch_template_id
 web_subnet_1_id             = module.vpc.public_subnets[0]
 web_subnet_2_id             = module.vpc.public_subnets[1]
-frontend_target_group_arn   = module.backend_alb.alb_target_group_arn
+frontend_target_group_arn   = module.frontend_alb.alb_target_group_arn
 
 frontend_desired_capacity = 1
 frontend_min_size         = 1
@@ -102,7 +102,7 @@ frontend_max_size         = 3
 backend_launch_template_id = module.frontend_and_backend_lt.backend_launch_template_id
 app_subnet_1_id            = module.vpc.private_app_subnets[0]
 app_subnet_2_id            = module.vpc.private_app_subnets[1]
-backend_target_group_arn   = module.frontend_alb.alb_target_group_arn
+backend_target_group_arn   = module.backend_alb.alb_target_group_arn
 backend_desired_capacity = 1
 backend_min_size         = 1
 backend_max_size         = 3
@@ -130,5 +130,6 @@ db_password       = "SuperSecretPass123"
 db_subnet_1_id    = module.vpc.private_db_subnets[0]
 db_subnet_2_id    = module.vpc.private_db_subnets[1]
 rds_sg_id         = module.vpc.database_sg_id
+
 
 }
