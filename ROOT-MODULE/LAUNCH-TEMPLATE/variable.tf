@@ -23,7 +23,7 @@ variable "backend_ami" {
 variable "instance_type" {
   description = "Instance type for EC2"
   type        = string
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
 
 variable "frontend_sg_id" {
@@ -40,3 +40,4 @@ variable "key_name" {
   description = "EC2 key pair name"
   type        = string
 }
+
