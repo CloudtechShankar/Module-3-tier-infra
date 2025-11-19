@@ -8,7 +8,7 @@ data "aws_ami" "frontend" {
   owners      = ["self"]
 
   filter {
-    name   = "name"
+    name   = "tag:Name"
     values = [var.frontend_ami]
   }
 }
@@ -21,7 +21,7 @@ data "aws_ami" "backend" {
   owners      = ["self"]
 
   filter {
-    name   = "name"
+    name   = "tag:Name"
     values = [var.backend_ami]
   }
 }
@@ -65,3 +65,4 @@ resource "aws_launch_template" "backend" {
     }
   }
 }
+
