@@ -28,7 +28,7 @@ variable "ami" {
 variable "instance_type" {
   description = "Instance type for the bastion host"
   type        = string
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
 
 variable "key_name" {
@@ -68,3 +68,4 @@ output "bastion_public_ip" {
 output "bastion_private_ip" {
   value = aws_instance.bastionhost.private_ip
 }
+
