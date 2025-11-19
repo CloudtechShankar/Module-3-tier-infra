@@ -10,6 +10,7 @@
 # private_subnet_6_cidr = "172.20.8.0/24"
 # availability_zone-1a = "us-east-1a"
 # availability_zone-1b = "us-east-1b"
-# ami = "ami-04b70fa74e45c3917"
+# ami = "ami-0fa3fe0fa7920f68e"
 # key-name = "us-east-1"
-# instance-type = "t2.micro"
+
+# instance-type = "t3.micro"
